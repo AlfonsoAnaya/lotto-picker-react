@@ -12,10 +12,10 @@ function generateSheet() {
     return sheet;
 }
 
-function pickNumbers(picks) {
+function pickNumbers(n) {
   let sheet = generateSheet();
   let playNumbers = []
-  for (let i=0; i<picks; i++) {
+  for (let i=0; i<n; i++) {
     let randomIndex = Math.floor(((Math.random())*(36-i)));
     playNumbers.push(sheet[randomIndex]);
     sheet.splice(randomIndex, 1);
