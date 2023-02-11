@@ -24,12 +24,10 @@ function pickNumbers(picks) {
   return playNumbers
 }
 
-pickNumbers();
 
 function PickNumbers() {
-  console.log(pickNumbers())
   return (
-    <p>{pickNumbers()}</p>
+    <p>{pickNumbers(picks)}</p>
   )
 }
 
