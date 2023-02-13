@@ -22,7 +22,7 @@ function PickNumbers() {
     sheet.splice(randomIndex, 1);
   }
   return(
-    <p>{result.splice(",")}</p>
+    <p>{result.join(",")}</p>
   )
 }
 
@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <h1>Your numbers are:</h1>
-      <PickNumbers/>
+      {Array(numberOfRows).fill(<PickNumbers />)}
     </div>
   );
 }
