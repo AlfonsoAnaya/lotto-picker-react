@@ -12,24 +12,21 @@ function generateSheet() {
     return sheet;
 }
 
-function pickNumbers(n) {
+function PickNumbers(picks) {
   let sheet = generateSheet();
   let playNumbers = []
-  for (let i=0; i<n; i++) {
+  for (let i=0; i<picks; i++) {
     let randomIndex = Math.floor(((Math.random())*(36-i)));
     playNumbers.push(sheet[randomIndex]);
     sheet.splice(randomIndex, 1);
   }
-  console.log(playNumbers)
-  return playNumbers
-}
-
-
-function PickNumbers() {
   return (
-    <p>{pickNumbers(picks)}</p>
+    <p>{playNumbers}</p>
   )
 }
+
+
+
 
 function App() {
   return (
