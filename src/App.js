@@ -12,27 +12,25 @@ function generateSheet() {
     return sheet;
 }
 
-function PickNumbers(picks) {
+
+function PickNumbers() {
   let sheet = generateSheet();
-  let playNumbers = []
-  for (let i=0; i<picks; i++) {
-    let randomIndex = Math.floor(((Math.random())*(36-i)));
-    playNumbers.push(sheet[randomIndex]);
+  let result = [];
+  for (let j=0; j<picks; j++) {
+    let randomIndex = Math.floor(((Math.random())*(36-j)));
+    result.push(sheet[randomIndex]);
     sheet.splice(randomIndex, 1);
   }
-  return (
-    <p>{playNumbers}</p>
+  return(
+    <p>{result.splice(",")}</p>
   )
 }
-
-
-
 
 function App() {
   return (
     <div className="App">
       <h1>Your numbers are:</h1>
-      <PickNumbers />
+      <PickNumbers/>
     </div>
   );
 }
