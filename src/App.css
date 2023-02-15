@@ -2,4 +2,26 @@
   text-align: center;
 }
 
+.numberList {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  border: solid rgb(226, 164, 226);
+  border-radius: 5px;
+  justify-content: center;
+  gap: .5em;
+  margin-bottom: .5em;
+  padding: .2em;
+}
 
+.numberItemList {
+  background: rgb(119, 119, 158);
+  color:rgb(243, 239, 234);
+  font-weight: bold;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+
+}

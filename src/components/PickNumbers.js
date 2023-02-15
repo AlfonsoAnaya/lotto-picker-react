@@ -13,7 +13,7 @@ function PickNumbers() {
       sheet.splice(randomIndex, 1);
     }
     return(
-      <ul>
+      <ul className="numberList">
         {result.map(number => (
           <li className="numberItemList">{number}</li>
         ))}
