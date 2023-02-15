@@ -13,7 +13,7 @@ function PickNumbers() {
       sheet.splice(randomIndex, 1);
     }
     return(
-      <p>{result.join(",")}</p>
+      <p>{result.join(", ")}</p>
     )
   }
 
