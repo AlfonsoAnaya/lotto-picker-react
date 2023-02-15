@@ -12,11 +12,18 @@ function PickNumbers() {
       result.push(sheet[randomIndex]);
       sheet.splice(randomIndex, 1);
     }
+    const numbersList = result.map((number, index) => 
+      <li 
+        key={index}
+        className="numberItemList"
+        
+        >
+          {number}
+      </li>
+    )
     return(
       <ul className="numberList">
-        {result.map(number => (
-          <li className="numberItemList">{number}</li>
-        ))}
+        {numbersList}
       </ul>
     )
   }
