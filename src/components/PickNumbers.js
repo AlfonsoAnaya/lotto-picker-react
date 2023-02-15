@@ -15,11 +15,7 @@ function PickNumbers() {
     return(
       <ul className="numberList">
         {result.map(number => (
-          <li 
-            key = {result(number)}
-            className="numberItemList">
-              {number}
-          </li>
+          <li className="numberItemList">{number}</li>
         ))}
       </ul>
     )
