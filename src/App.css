@@ -27,12 +27,11 @@
 }
 
 footer {
-  font-family: var(--font-secondary);
+  margin-top: 2em;
   font-size: .9em;
-  color: var(--color-white);
   text-align: center;
-  height: 3em;
-  background-color: #4daff0bb;
+  height: 3.5em;
+  background-color: rgb(119, 119, 158);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +39,6 @@ footer {
 
 footer a {
   text-decoration: underline dotted;
-  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -48,5 +46,5 @@ footer a:hover {
   text-decoration: underline solid;
   color: var(--color-white);
   cursor: pointer;
-  color: rgb(0, 118, 227);
+  color: rgb(243, 239, 234);
 }
