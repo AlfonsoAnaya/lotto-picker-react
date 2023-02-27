@@ -4,7 +4,7 @@ function PickNumbers({picks, extension}) {
     let sheet = generateSheet(extension);
     let result = [];
     for (let j=0; j<picks; j++) {
-      let randomIndex = Math.floor(((Math.random())*(36-j)));
+      let randomIndex = Math.floor(((Math.random())*(extension-j)));
       result.push(sheet[randomIndex]);
       sheet.splice(randomIndex, 1);
     }
