@@ -1,12 +1,11 @@
 import {useState} from "react"
 
-function Form({picks, setPicks}) {
-    const [extension, setExtension] = useState(36);
+function Form({
+        picks, setPicks,
+        extension, setExtension
+    }) {
+    
     const [rows, setRows] = useState(10);
-
-    function handleExtensionChange(e) {
-        setExtension(e.target.value)
-    }
 
     function handleRowsChange(e) {
         setRows(e.target.value)
@@ -19,7 +18,7 @@ function Form({picks, setPicks}) {
     return (
         <form className="user-input-form" onSubmit={handleSubmit}>
             <label>
-                Select Extension of Lottery<input placeholder={extension} name="extension" onChange={handleExtensionChange}/>
+                Select Extension of Lottery<input placeholder={extension} name="extension" onChange={setExtension}/>
             </label>
             <label>
                 Select Number of Picks<input placeholder={picks} name="picks" onChange={setPicks}/>

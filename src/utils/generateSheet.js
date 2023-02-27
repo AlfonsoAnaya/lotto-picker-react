@@ -1,8 +1,6 @@
-let gameLength = 36;
-
-function generateSheet() {
+function generateSheet(extension) {
     let sheet = [];
-    for (let i=0; i<gameLength; i++) {
+    for (let i=0; i<extension; i++) {
         sheet.push(i+1);
     }
     return sheet;
