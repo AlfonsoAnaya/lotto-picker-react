@@ -1,17 +1,23 @@
 import './App.css';
+import {useState} from "react"
 import Form from "./components/Form.js"
 import PickNumbers from './components/PickNumbers.js';
 import Footer from "./components/Footer"
 
 
-let numberOfRows = 10;
-
 function App() {
+  const [picks, setPicks] = useState(7);
+  function handlePicksChange(e) {
+    setPicks(e.target.value)
+}
+  let rows = 10;
   return (
     <div className="App">
-      <Form />
+      <Form         
+        picks={picks === 7}
+        setPicks={handlePicksChange}/>
       <h1>Your numbers are:</h1>
-      {Array(numberOfRows).fill(<PickNumbers />)}
+      {Array(rows).fill(<PickNumbers />)}
       <Footer />
     </div>
   );
