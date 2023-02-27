@@ -1,10 +1,6 @@
 import generateSheet from '../utils/generateSheet.js'
 
-let picks = 7;
-
-
-
-function PickNumbers() {
+function PickNumbers({picks}) {
     let sheet = generateSheet();
     let result = [];
     for (let j=0; j<picks; j++) {

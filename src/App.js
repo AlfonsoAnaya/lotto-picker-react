@@ -14,10 +14,11 @@ function App() {
   return (
     <div className="App">
       <Form         
-        picks={picks === 7}
+        picks={picks}
         setPicks={handlePicksChange}/>
       <h1>Your numbers are:</h1>
-      {Array(rows).fill(<PickNumbers />)}
+      {Array(rows).fill(<PickNumbers 
+        picks={picks}/>)}
       <Footer />
     </div>
   );
