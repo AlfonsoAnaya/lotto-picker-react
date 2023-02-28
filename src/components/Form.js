@@ -1,16 +1,9 @@
-import {useState} from "react"
-
 function Form({
         picks, setPicks,
-        extension, setExtension
+        extension, setExtension,
+        rows, setRows
     }) {
     
-    const [rows, setRows] = useState(10);
-
-    function handleRowsChange(e) {
-        setRows(e.target.value)
-    }
-
     function handleSubmit(e) {
         e.preventDefault();
     }
@@ -24,7 +17,7 @@ function Form({
                 Select Number of Picks<input placeholder={picks} name="picks" onChange={setPicks}/>
             </label>
             <label>
-                Select Number of Rows<input placeholder={rows} name="rows" onChange={handleRowsChange}/>
+                Select Number of Rows<input placeholder={rows} name="rows" onChange={setRows}/>
             </label>
             <button type="submit">
                 Get Rows

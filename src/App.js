@@ -1,13 +1,14 @@
 import './App.css';
 import {useState} from "react"
 import Form from "./components/Form.js"
-import PickNumbers from './components/PickNumbers.js';
+import Rows from './components/Rows.js';
 import Footer from "./components/Footer"
 
 
 function App() {
   const [picks, setPicks] = useState(7);
   const [extension, setExtension] = useState(36);
+  const [rows, setRows] = useState(20);
 
   function handlePicksChange(e) {
     setPicks(e.target.value)
@@ -17,19 +18,23 @@ function App() {
     setExtension(e.target.value)
   }
 
+  function handleRowsChange(e) {
+    setRows(e.target.value)
+}
 
-  let rows = 10;
   return (
     <div className="App">
       <Form         
         picks={picks}
         setPicks={handlePicksChange}
         extension={extension}
-        setExtension={handleExtensionChange}/>
+        setExtension={handleExtensionChange}
+        rows={rows}
+        setRows={handleRowsChange}/>
       <h1>Your numbers are:</h1>
-      {Array(rows).fill(<PickNumbers 
+      <Rows 
         picks={picks}
-        extension={extension}/>)}
+        extension={extension}/>
       <Footer />
     </div>
   );
