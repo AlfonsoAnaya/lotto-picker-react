@@ -1,7 +1,7 @@
 function generateSheet(extension) {
     let sheet = [];
-    for (let i=0; i<extension; i++) {
-        sheet.push(i+1);
+    for (let k=0; k<extension; k++) {
+        sheet.push(k+1);
     }
     return sheet;
 }

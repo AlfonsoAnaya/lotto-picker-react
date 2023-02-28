@@ -1,11 +1,12 @@
 import generateSheet from '../utils/generateSheet.js'
 
 function Rows({ picks, extension, rows }) {
+  console.log("deploying functin!")
   let rowsArray = [];
-  let row = [];
+  
   //a loop that adds rows
   for (let i = 0; i < rows; i++) {
-    
+    let row = [];
     //a loop that adds numbers to the row
     for (let j = 0; j < picks; j++) {
       let sheet = generateSheet(extension);
@@ -13,12 +14,14 @@ function Rows({ picks, extension, rows }) {
       row.push(sheet[randomIndex]);
       sheet.splice(randomIndex, 1);
     }
+    console.log(i,row);
+    rowsArray.push(row);
   }
-  rowsArray.push(row);
+  
   const resultingRows = rowsArray.map((rowArr, index) => 
     <ul
       key={index}
-      className="numbersList"
+      className="row"
     >
       {rowArr.map((number, newIndex) =>
         <li
@@ -34,7 +37,7 @@ function Rows({ picks, extension, rows }) {
   )
 
   return (
-    <ul>
+    <ul className="rowsList">
       {resultingRows}
     </ul>
   )

@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 function App() {
   const [picks, setPicks] = useState(7);
   const [extension, setExtension] = useState(36);
-  const [rows, setRows] = useState(20);
+  const [rows, setRows] = useState(10);
 
   function handlePicksChange(e) {
     setPicks(e.target.value)
@@ -34,7 +34,8 @@ function App() {
       <h1>Your numbers are:</h1>
       <Rows 
         picks={picks}
-        extension={extension}/>
+        extension={extension}
+        rows={rows}/>
       <Footer />
     </div>
   );

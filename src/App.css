@@ -6,7 +6,11 @@
   margin: 1em;
 }
 
-.numberList {
+.rowsList {
+
+}
+
+.row {
   margin: 0 auto;
   list-style: none;
   display: flex;
