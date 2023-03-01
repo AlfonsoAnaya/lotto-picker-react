@@ -22,7 +22,6 @@ function Form({
             <button type="submit">
                 Get Rows
             </button>
-            <p>extension {extension}, picks {picks}, rows {rows}</p>
         </form>
     )
 }
