@@ -11,17 +11,14 @@ function Form({
     return (
         <form className="user-input-form" onSubmit={handleSubmit}>
             <label>
-                Select Extension of Lottery<input placeholder={extension} name="extension" onChange={setExtension}/>
+                Extension of Lottery: <input className="form-input" placeholder={extension} name="extension" onChange={setExtension}/>
             </label>
             <label>
-                Select Number of Picks<input placeholder={picks} name="picks" onChange={setPicks}/>
+                Number of Picks: <input className="form-input" placeholder={picks} name="picks" onChange={setPicks}/>
             </label>
             <label>
-                Select Number of Rows<input placeholder={rows} name="rows" onChange={setRows}/>
+                Number of Rows: <input className="form-input" placeholder={rows} name="rows" onChange={setRows}/>
             </label>
-            <button type="submit">
-                Get Rows
-            </button>
         </form>
     )
 }

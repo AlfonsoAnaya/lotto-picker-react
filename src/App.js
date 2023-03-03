@@ -1,7 +1,8 @@
 import './App.css';
 import {useState} from "react"
+import Header from "./components/Header.js"
 import Form from "./components/Form.js"
-import Rows from './components/Rows.js';
+import Rows from './components/Rows.js'
 import Footer from "./components/Footer"
 
 
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Form         
         picks={picks}
         setPicks={handlePicksChange}
@@ -31,7 +33,6 @@ function App() {
         setExtension={handleExtensionChange}
         rows={rows}
         setRows={handleRowsChange}/>
-      <h1>Your numbers are:</h1>
       <Rows 
         picks={picks}
         extension={extension}
