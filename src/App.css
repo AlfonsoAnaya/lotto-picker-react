@@ -31,14 +31,17 @@ h1 {
   width: 80%;
   border: blue solid;
   display:grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .form-input {
-
+ padding: .75em 2em;
+ border-radius: 3em;
 }
 
 .rowsList {
+  list-style-type: none;
+  padding: 0;
   border: blue solid;
 }
 
