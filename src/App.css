@@ -37,6 +37,9 @@ h1 {
 .form-input {
  padding: .75em 2em;
  border-radius: 3em;
+ border: none;
+ background-color: var(--color-white);
+ color: var(--color-primary);
 }
 
 .rowsList {
