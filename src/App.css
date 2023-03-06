@@ -27,7 +27,7 @@ h1 {
 .user-input-form{
   color: var(--color-primary);
   font-weight: bold;
-  margin: 3em auto;
+  margin: 2em auto;
   width: 80%;
   border: blue solid;
   display:grid;
@@ -37,7 +37,7 @@ h1 {
 .form-input {
  padding: .75em 2em;
  border-radius: 3em;
- border: none;
+ border: var(--color-primary) solid 1px;
  background-color: var(--color-white);
  color: var(--color-primary);
 }
@@ -54,7 +54,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
-  border: solid rgb(226, 164, 226);
   border-radius: 5px;
   justify-content: center;
   gap: .5em;
