@@ -1,18 +1,21 @@
 :root {
   --color-primary: rgb(111, 111, 150);
   --color-white: whitesmoke;
+  --font-number: 'Titan One', sans-serif;
+  --font-text: 'Rubik Mono One', sans-serif;
 }
 
 .App {
   text-align: center;
   min-height: calc(98vh);
   background-color: rgb(248, 239, 239);
+  font-family: var(--font-text);
+  font-weight: 100;
 }
 
 header {
   background: var(--color-primary);
   color: var(--color-white);
-  height: 8em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,17 +24,31 @@ header {
 
 h1 {
   margin: 0;
-  font-size: 3rem;
+  margin-top: .5em;
+  font-size: 4rem;
+  
+}
+
+h2 {
+  color: var(--color-primary);
 }
 
 .user-input-form{
   color: var(--color-primary);
-  font-weight: bold;
   margin: 2em auto;
+  margin-bottom: 3em;
   width: 80%;
-  border: blue solid;
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: fit-content;
+  justify-content: center;
+  justify-items: end;
+  gap: 1em;
+}
+
+@media (min-width: 800px) {
+  .user-input-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .form-input {
@@ -45,7 +62,7 @@ h1 {
 .rowsList {
   list-style-type: none;
   padding: 0;
-  border: blue solid;
+  margin-bottom: 5em;
 }
 
 .row {
@@ -64,24 +81,25 @@ h1 {
 .numberItemList {
   background: var(--color-primary);
   color: var(--color-white);
-  font-weight: bold;
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-family: var(--font-number);
 }
 
 footer {
   position: sticky;
   top: 100%;
   margin-top: 2em;
-  font-size: .9em;
+  font-size: 1.2em;
   text-align: center;
   height: 3.5em;
   background-color: var(--color-primary);
+  color: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
